@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .IsHome }}{{ .Site.Title }} - Premier In-Home Dog Sitting{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+    <meta name="description" content="The Traveling Dog Sitter offers premier, in-home dog sitting for discerning owners in the Puget Sound region. Absolute peace of mind for you, unmatched comfort for your pet.">
+
+    <!-- Updated JSON-LD script that pulls info from hugo.toml -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "{{ .Site.Title }}",
+      "image": "https://placehold.co/600x600/557373/F4F1EA?text=The+Traveling+Dog+Sitter+Logo",
+      "@id": "{{ .Site.BaseURL | absURL }}",
+      "url": "{{ .Site.BaseURL | absURL }}",
+      "telephone": "{{ .Site.Params.phone }}",
+      "email": "{{ .Site.Params.email }}",
+      "description": "Premier in-home dog and pet sitting service in the Greater Seattle area, providing absolute peace of mind through reliable, discreet, and holistic care.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Seattle",
+        "addressRegion": "WA",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 47.6062, "longitude": -122.3321 },
+      "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ], "opens": "00:00", "closes": "23:59" },
+      "sameAs": [
+        "{{ .Site.Params.facebook }}",
+        "{{ .Site.Params.linkedin }}"
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --c-cream: #F4F1EA; --c-navy: #012340; --c-slate-blue: #557373; --c-gold: #C0B283; --font-h1: 'Playfair Display', serif; --font-h2-h3: 'Montserrat', sans-serif; --font-body: 'Source Sans Pro', sans-serif; }
+        body { margin: 0; font-family: var(--font-body); background-color: var(--c-cream); color: var(--c-navy); font-size: 18px; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+        main { flex-grow: 1; }
+        .site-header { background-color: var(--c-cream); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e0dbd1; }
+        .site-title { font-family: var(--font-h1); font-weight: 400; font-size: 28px; color: var(--c-navy); text-decoration: none; }
+        .main-nav ul { margin: 0; padding: 0; list-style: none; display: flex; gap: 30px; }
+        .main-nav a { font-family: var(--font-h2-h3); text-decoration: none; color: var(--c-slate-blue); font-weight: 600; font-size: 16px; padding-bottom: 5px; border-bottom: 2px solid transparent; transition: all 0.3s ease; }
+        .main-nav a:hover, .main-nav a.active { color: var(--c-navy); border-bottom-color: var(--c-gold); }
+
+        /* --- Updated Footer Styling --- */
+        .site-footer { background-color: var(--c-navy); color: var(--c-cream); text-align: center; padding: 40px 20px; font-size: 14px; }
+        .footer-contact { margin-bottom: 20px; }
+        .footer-contact a { color: var(--c-cream); text-decoration: none; margin: 0 15px; }
+        .footer-contact a:hover { text-decoration: underline; }
+        .footer-copyright { font-size: 12px; opacity: 0.7; }
+    </style>
+
+    {{ block "styles" . }}{{ end }}
+
+    {{ block "head" . }}{{ end }}
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="/" class="site-title">{{ .Site.Title }}</a>
+        <nav class="main-nav">
+            <ul>
+                {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>
+                        {{ .Name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Updated Footer with Contact Info -->
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a> |
+            <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+        </div>
+        <div class="footer-copyright">
+            &copy; {{ now.Format "2006" }} {{ .Site.Title }}. All Rights Reserved.
+        </div>
+    </footer>
+
+    {{ block "scripts" . }}{{ end }}
+
+</body>
+</html>

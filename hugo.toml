@@ -1,0 +1,50 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'The Traveling Dog Sitter'
+theme = 'quiet-luxury'
+
+# Author information for metadata
+[author]
+  name = "Zoli Hajdu"
+
+# --- Site-wide Parameters ---
+# We store contact info here for easy access in templates
+[params]
+  phone = "(979) 969-7312"
+  email = "office@thetravelingdogsitter.com"
+  facebook = "https://www.facebook.com/profile.php?id=61559301070941"
+  linkedin = "https://www.linkedin.com/in/zoli-hajdu-6641b534b"
+
+# --- Main Menu Configuration ---
+[[menu.main]]
+  name = "About"
+  url = "/about"
+  weight = 5
+[[menu.main]]
+  name = "Services"
+  url = "/services"
+  weight = 10
+[[menu.main]]
+  name = "Testimonials"
+  url = "/testimonials"
+  weight = 20
+[[menu.main]]
+  name = "The BRT"
+  url = "/black-russian-terrier"
+  weight = 25
+[[menu.main]]
+  name = "The Blog"
+  url = "/blog"
+  weight = 30
+[[menu.main]]
+    name = "Client Galleries"
+    url = "/galleries"
+    weight = 40
+[[menu.main]]
+    name = "Gift Store"
+    url = "/store"
+    weight = 45
+[[menu.main]]
+  name = "Contact"
+  url = "/contact"
+  weight = 50

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Luxury Pet Sitting on The Traveling Dog Sitter</title>
+    <link>http://localhost:1313/categories/luxury-pet-sitting/</link>
+    <description>Recent content in Luxury Pet Sitting on The Traveling Dog Sitter</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Jul 2025 14:03:00 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/luxury-pet-sitting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why &#39;Knowing the Breed&#39; Isn&#39;t Enough</title>
+      <link>http://localhost:1313/blog/why-knowing-the-breed-isnt-enough/</link>
+      <pubDate>Fri, 04 Jul 2025 14:03:00 -0700</pubDate>
+      <guid>http://localhost:1313/blog/why-knowing-the-breed-isnt-enough/</guid>
+      <description>A deep dive into the pros, cons, and realities of hiring a professional pet sitter versus using a free house-swapping service.</description>
+    </item>
+    <item>
+      <title>Premium vs. Trust Economy</title>
+      <link>http://localhost:1313/blog/premium-vs-prust-economy/</link>
+      <pubDate>Thu, 03 Jul 2025 14:03:00 -0700</pubDate>
+      <guid>http://localhost:1313/blog/premium-vs-prust-economy/</guid>
+      <description>A deep dive into the pros, cons, and realities of hiring a professional pet sitter versus using a free house-swapping service.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,239 @@
+{{/*
+  layouts/blog/list.html (or layouts/_default/list.html)
+  This file controls the main blog listing page.
+  It's now wrapped in the site's standard page structure for a consistent look.
+*/}}
+
+{{ define "main" }}
+  {{/* Page Header, consistent with your other pages.
+    I've added a placeholder background image. You can change the URL to any image you like.
+    For a dynamic image, you would set it in the front matter of /content/blog/_index.md
+  */}}
+  <div class="page-header" style="background-image: url('/images/blog-header.jpg');">
+      <div class="page-header-content">
+          <h1>The Traveling Dog Sitter Blog</h1>
+          <p>Insights on dog care, client stories, and life with our beloved terriers.</p>
+      </div>
+  </div>
+
+  {{/* Main content area with standard containers */}}
+  <div class="page-content">
+    <div class="section-container">
+
+      <!-- Static Filter Controls -->
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dog-behavior-communication">Dog Behavior & Communication</button>
+        <button class="filter-btn" data-filter="dog-health-wellness">Dog Health & Wellness</button>
+        <button class="filter-btn" data-filter="lifestyle-entertainment">Lifestyle & Entertainment</button>
+        <button class="filter-btn" data-filter="luxury-pet-sitting">Luxury Pet Sitting</button>
+        <button class="filter-btn" data-filter="practical-advice">Practical Advice</button>
+        <button class="filter-btn" data-filter="senior-dog-care-well-being">Senior Dog Care & Well-being</button>
+      </div>
+
+      <!-- Post List -->
+      <div class="post-list">
+        {{ range .Pages }}
+          <article class="post-entry" data-categories="{{ range .Params.categories }}{{ . | urlize }} {{ end }}">
+            {{/* This section displays the preview image for each post */}}
+            {{ with .Params.image }}
+              <a href="{{ $.Permalink }}" class="post-image-link">
+                <img src="{{ . | relURL }}" alt="Preview image for {{ $.Title }}" class="post-preview-image">
+              </a>
+            {{ end }}
+
+            <div class="post-content">
+              <a href="{{ .Permalink }}">
+                <h2>{{ .Title }}</h2>
+              </a>
+              {{ with .Params.subtitle }}
+                <p class="subtitle">{{ . }}</p>
+              {{ end }}
+              <p>{{ .Summary }}</p>
+              <a href="{{ .Permalink }}" class="read-more">Read More →</a>
+            </div>
+          </article>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterContainer = document.querySelector('.filter-controls');
+      const posts = document.querySelectorAll('.post-entry');
+
+      if (!filterContainer) {
+        return;
+      }
+
+      filterContainer.addEventListener('click', function (e) {
+        // Only run if a button is clicked
+        if (!e.target.matches('.filter-btn')) {
+          return;
+        }
+
+        const filterValue = e.target.dataset.filter;
+
+        // Update active button state
+        filterContainer.querySelector('.active').classList.remove('active');
+        e.target.classList.add('active');
+
+        // Filter posts
+        posts.forEach(post => {
+          const postCategories = post.dataset.categories;
+
+          if (filterValue === 'all' || (postCategories && postCategories.includes(filterValue))) {
+            post.classList.remove('hidden');
+          } else {
+            post.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+
+{{ end }}
+
+
+{{ define "styles" }}
+<style>
+    /* --- Standard Page Structure (from your section.html) --- */
+    .page-header { padding: 80px 40px; background-size: cover; background-position: center; text-align: center; color: #F4F1EA; position: relative; }
+    .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(1, 35, 64, 0.6); }
+    .page-header-content { position: relative; max-width: 800px; margin: 0 auto; }
+    .page-header-content h1 { font-size: 48px; margin-top: 0; }
+    .page-header-content p { font-size: 20px; }
+
+    .page-content { padding: 60px 40px; }
+    .section-container { max-width: 1200px; margin: 0 auto; }
+
+    /* --- Filter Controls --- */
+    .filter-controls {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      background-color: #f4f1ea;
+      color: #557373;
+      border: 1px solid #557373;
+      padding: 0.5rem 1.25rem;
+      margin: 0.25rem;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+      background-color: #e0ddd7;
+    }
+
+    .filter-btn.active {
+      background-color: #557373;
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* --- Post List --- */
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      max-width: 850px; /* Increased width for side-by-side layout */
+      margin: 0 auto; /* Centered the list */
+    }
+
+    .post-entry {
+      background-color: #ffffff;
+      border: 1px solid #e0ddd7;
+      border-radius: 8px;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      transform-origin: top;
+      display: flex;
+      flex-direction: row; /* Changed to row for side-by-side layout */
+      overflow: hidden; /* Ensures image corners are rounded */
+    }
+
+    .post-image-link {
+        flex-shrink: 0;
+        width: 250px;
+    }
+
+    .post-preview-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .post-content {
+      padding: 1.5rem 2rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post-entry.hidden {
+      opacity: 0;
+      transform: scale(0.95);
+      height: 0;
+      padding: 0;
+      margin: 0;
+      border: none;
+      overflow: hidden;
+    }
+
+    .post-entry h2 {
+      margin-top: 0;
+    }
+
+    .post-entry a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .post-entry a:hover h2 {
+      color: #557373;
+    }
+
+    .post-entry .subtitle {
+      color: #666;
+      margin-top: -0.75rem;
+      font-style: italic;
+    }
+
+    .post-content p {
+        flex-grow: 1; /* Pushes the read more link down */
+    }
+
+    .post-entry .read-more {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #557373;
+      text-decoration: none;
+    }
+
+    .post-entry .read-more:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments for smaller screens */
+    @media (max-width: 768px) {
+      .post-entry {
+        flex-direction: column; /* Stack vertically on mobile */
+      }
+      .post-image-link {
+        width: 100%;
+        height: 200px;
+      }
+      .post-content {
+        padding: 1.5rem;
+      }
+    }
+
+</style>
+{{ end }}

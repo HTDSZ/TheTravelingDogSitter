@@ -1,0 +1,22 @@
+{{/*
+This partial template generates the FAQPage JSON-LD structured data.
+It loops through the FAQ items defined in a page's front matter.
+*/}}
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {{ range $index, $element := .Params.faq.items }}
+        {
+            "@type": "Question",
+            "name": "{{ .question }}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{ .answer | plainify }}"
+            }
+        }{{ if ne (add $index 1) (len $.Params.faq.items) }},{{ end }}
+        {{ end }}
+    ]
+}
+</script>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Practical Advice on The Traveling Dog Sitter</title>
+    <link>http://localhost:1313/categories/practical-advice/</link>
+    <description>Recent content in Practical Advice on The Traveling Dog Sitter</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jul 2025 10:03:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/practical-advice/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Happens When You Never Leave</title>
+      <link>http://localhost:1313/blog/what-happens-when-you-never-leave/</link>
+      <pubDate>Wed, 09 Jul 2025 10:03:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/what-happens-when-you-never-leave/</guid>
+      <description>Over-attachment and isolation, often stemming from the pandemic and overprotective owner mindsets, have led to a generation of dogs emotionally unprepared for real-life independence and social interaction, which requires gradual, positive exposure rather than intense immersion.</description>
+    </item>
+    <item>
+      <title>Do Dogs Remember?</title>
+      <link>http://localhost:1313/blog/do-dogs-remember/</link>
+      <pubDate>Tue, 08 Jul 2025 14:03:00 -0700</pubDate>
+      <guid>http://localhost:1313/blog/do-dogs-remember/</guid>
+      <description>Long-term live-in dog sitters create deep, lasting emotional bonds with dogs by providing consistent 24/7 care that leverages dogs&amp;rsquo; strong associative memories and need for secure attachment, transforming the dog&amp;rsquo;s experience beyond basic needs.</description>
+    </item>
+    <item>
+      <title>Premium vs. Trust Economy</title>
+      <link>http://localhost:1313/blog/premium-vs-prust-economy/</link>
+      <pubDate>Thu, 03 Jul 2025 14:03:00 -0700</pubDate>
+      <guid>http://localhost:1313/blog/premium-vs-prust-economy/</guid>
+      <description>A deep dive into the pros, cons, and realities of hiring a professional pet sitter versus using a free house-swapping service.</description>
+    </item>
+  </channel>
+</rss>

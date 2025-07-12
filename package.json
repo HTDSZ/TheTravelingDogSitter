@@ -1,0 +1,12 @@
+{
+  "name": "hugo-tailwind-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "postcss assets/css/main.css -o assets/css/style.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.4.1"
+  }
+}

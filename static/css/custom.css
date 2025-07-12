@@ -1,0 +1,118 @@
+/* --- Global Responsive Rules (Apply to all elements by default) --- */
+
+/* Ensure all images scale down within their containers */
+img {
+    max-width: 100%; /* Image will never be wider than its parent */
+    height: auto;    /* Maintain aspect ratio */
+    display: block;  /* Prevents extra space below images */
+}
+
+/* Make sure any embedded videos/iframes are responsive */
+iframe, video, embed {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Use box-sizing for easier padding/border management */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* --- Mobile-First Styles (These are the default styles for small screens) --- */
+
+/* Example: If your main content area is too wide or has fixed margins */
+.your-theme-main-content-selector { /* REPLACE THIS with the actual CSS selector from your theme */
+    width: 100%; /* Make it take full width on mobile */
+    padding: 15px; /* Adjust padding for mobile devices */
+    margin: 0; /* Remove any fixed left/right margins */
+}
+
+/* Example: If your navigation menu items are side-by-side and break */
+.your-theme-nav-menu-selector { /* REPLACE THIS */
+    display: flex;
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center; /* Center them */
+    padding: 10px 0;
+}
+.your-theme-nav-menu-selector li { /* REPLACE THIS */
+    margin: 5px 0; /* Adjust vertical spacing */
+}
+
+/* Example: If your theme has sidebars or multiple columns */
+.your-theme-sidebar-selector, /* REPLACE THESE */
+.your-theme-main-column-selector {
+    width: 100%; /* Make them full width on mobile */
+    float: none; /* Clear any floats */
+    margin: 0 0 20px 0; /* Add bottom margin for spacing when stacked */
+}
+
+/* Adjust font sizes for better mobile readability */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+h1 {
+    font-size: 2em; /* Example: 2 times the body font size */
+}
+h2 {
+    font-size: 1.5em;
+}
+
+/* --- Media Queries for Larger Screens (Tablets and Desktops) --- */
+
+/* Styles for screens 768px wide and up (typical tablet portrait) */
+@media (min-width: 768px) {
+    /* Example: Revert main content to a max-width and center it */
+    .your-theme-main-content-selector {
+        max-width: 960px; /* Or whatever desktop width you prefer */
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Example: Revert navigation to horizontal */
+    .your-theme-nav-menu-selector {
+        flex-direction: row; /* Layout menu items horizontally */
+        justify-content: space-between; /* Or space-around, etc. */
+        padding: 0;
+    }
+    .your-theme-nav-menu-selector li {
+        margin: 0 15px; /* Adjust horizontal spacing */
+    }
+
+    /* Example: Revert columns to side-by-side layout */
+    .your-theme-layout-container { /* You might need a parent selector here */
+        display: flex;
+        justify-content: space-between;
+        gap: 30px; /* Space between columns */
+    }
+    .your-theme-sidebar-selector {
+        width: 30%; /* Example: Sidebar takes 30% */
+        margin: 0; /* Remove bottom margin */
+    }
+    .your-theme-main-column-selector {
+        width: 65%; /* Example: Main column takes 65% */
+        margin: 0;
+    }
+
+    /* Adjust font sizes for larger screens */
+    body {
+        font-size: 17px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+/* Styles for screens 1024px wide and up (typical desktop) */
+@media (min-width: 1024px) {
+    .your-theme-main-content-selector {
+        max-width: 1200px; /* Even wider for large desktops */
+    }
+    /* Further desktop-specific adjustments */
+    body {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 3em;
+    }
+}

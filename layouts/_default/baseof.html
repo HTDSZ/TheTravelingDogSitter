@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {{ $styles := resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ if .IsHome }}{{ .Site.Title }} - Premier In-Home Dog Sitting{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
@@ -59,6 +62,10 @@
     {{ block "styles" . }}{{ end }}
 
     {{ block "head" . }}{{ end }}
+
+    <!-- THIS IS THE IMPORTANT LINE: Link your custom.css -->
+    <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}">
+
 </head>
 <body>
 

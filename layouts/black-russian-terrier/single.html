@@ -1,31 +1,22 @@
 {{ define "main" }}
-<div class="post-container">
-    <article class="post-content">
-        <header class="post-header">
-            <h1 class="post-title">{{ .Title }}</h1>
-            <div class="post-meta">
-                <span>A Deep Dive into the Breed</span>
-            </div>
-        </header>
-        <div class="post-featured-image">
-            <img src="{{ .Params.image }}" alt="{{ .Title }}">
-        </div>
-        <div class="post-body">
-            {{ .Content }}
-        </div>
-    </article>
-</div>
-{{ end }}
 
-{{ define "styles" }}
-<style>
-    .post-container { max-width: 800px; margin: 60px auto; padding: 0 40px; }
-    .post-header { text-align: center; margin-bottom: 40px; }
-    .post-title { font-family: var(--font-h1); font-size: 48px; line-height: 1.2; margin: 0 0 15px 0; }
-    .post-meta { font-family: var(--font-h2-h3); font-size: 16px; color: var(--c-slate-blue); }
-    .post-featured-image { margin-bottom: 40px; }
-    .post-featured-image img { width: 100%; border-radius: 10px; }
-    .post-body { font-size: 18px; line-height: 1.7; }
-    .post-body h2, .post-body h3 { font-family: var(--font-h2-h3); font-weight: 600; }
-</style>
+<!-- Hero Section -->
+<section class="relative h-[28rem] w-full mb-12">
+  <img src="{{ .Params.image }}" alt="{{ .Title }}" class="absolute inset-0 h-full w-full object-cover grayscale">
+  <div class="absolute inset-0 bg-navy opacity-70"></div>
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+    <h1 class="font-h1 text-5xl md:text-6xl text-cream drop-shadow mb-4">{{ .Title }}</h1>
+    {{ with .Params.summary }}
+      <p class="font-h2 text-xl md:text-2xl text-cream drop-shadow max-w-3xl mx-auto">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="py-20 px-6 bg-cream">
+  <div class="prose prose-lg prose-headings:text-navy prose-p:text-navy prose-strong:text-navy max-w-4xl mx-auto">
+    {{ .Content }}
+  </div>
+</section>
+
 {{ end }}

@@ -10,9 +10,9 @@ header:
   image: "/images/store-header.png"
 
 # --- Login Section ---
-login:
-  intro_text: "Step into a selected collection of gifts that celebrate dogs in all their soulful glory. From mugs adorned with your pup’s portrait to keepsakes honoring others’ beloved companions, each piece is a tribute to personality, joy, and the bond we share with our dogs."
-  button_text: "Access to The Gift Store"
+
+intro_text: "Step into a selected collection of gifts that celebrate dogs in all their soulful glory. From mugs adorned with your pup’s portrait to keepsakes honoring others’ beloved companions, each piece is a tribute to personality, joy, and the bond we share with our dogs."
+button_text: "Access to The Gift Store"
   # This URL now points to your real Zozzle homepage.
-  button_link: "https://www.zazzle.com/store/sehonnani/products" 
+button_link: "https://www.zazzle.com/store/sehonnani/products" 
 ---

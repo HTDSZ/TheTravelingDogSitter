@@ -1,70 +1,26 @@
 {{ define "main" }}
-<div class="page-header" style="background-image: url('{{ .Params.header.image }}');">
-    <div class="page-header-content">
-        <h1>{{ .Params.header.title }}</h1>
-        <p>{{ .Params.header.subtitle }}</p>
-    </div>
-</div>
+<!-- Page Header -->
+<section class="relative h-[60vh] w-full mb-16">
+  <img src="{{ .Params.header.image }}" alt="Hero Image" class="absolute inset-0 h-full w-full object-cover grayscale">
+  <div class="absolute inset-0 bg-navy opacity-70"></div>
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+    <h1 class="font-h1 text-5xl md:text-6xl text-cream drop-shadow mb-4">{{ .Params.header.title }}</h1>
+    <p class="font-h2 text-xl md:text-2xl text-cream drop-shadow">{{ .Params.header.subtitle }}</p>
+  </div>
+</section>
 
-<div class="page-content contact-section">
-    <div class="section-container contact-container">
-        <div class="contact-card">
-            <div class="contact-method">
-                <p class="contact-intro">{{ .Params.email_intro }}</p>
-                <a href="mailto:{{ .Site.Params.email }}" class="contact-link">{{ .Site.Params.email }}</a>
-            </div>
-            <div class="contact-method">
-                <p class="contact-intro">{{ .Params.phone_intro }}</p>
-                <a href="tel:{{ .Site.Params.phone }}" class="contact-link">{{ .Site.Params.phone }}</a>
-            </div>
-        </div>
-    </div>
-</div>
-{{ end }}
 
-{{ define "styles" }}
-<style>
-    .page-header { padding: 80px 40px; background-size: cover; background-position: center; text-align: center; color: var(--c-cream); position: relative; }
-    .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(1, 35, 64, 0.6); }
-    .page-header-content { position: relative; max-width: 800px; margin: 0 auto; }
-    .page-header-content h1 { font-family: var(--font-h1); font-size: 48px; margin-top: 0; }
-    .page-header-content p { font-family: var(--font-h2-h3); font-size: 20px; }
-
-    .page-content { padding: 80px 40px; }
-    .section-container { max-width: 1100px; margin: 0 auto; }
-
-    /* --- Contact Page Styling --- */
-    .contact-container {
-        max-width: 700px;
-    }
-    .contact-card {
-        background-color: #fff;
-        border: 1px solid #e0dbd1;
-        border-radius: 10px;
-        padding: 50px;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    }
-    .contact-method {
-        margin-bottom: 40px;
-    }
-    .contact-method:last-child {
-        margin-bottom: 0;
-    }
-    .contact-intro {
-        font-family: var(--font-h2-h3);
-        color: var(--c-slate-blue);
-        margin: 0 0 10px 0;
-    }
-    .contact-link {
-        font-family: var(--font-h1);
-        font-size: 32px;
-        color: var(--c-navy);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-    .contact-link:hover {
-        color: var(--c-gold);
-    }
-</style>
+<!-- Contact Info Section -->
+<section class="py-20 px-6 bg-cream text-center">
+  <div class="max-w-xl mx-auto space-y-6">
+    <p class="text-navy text-lg">{{ .Params.email_intro }}</p>
+    <p class="text-navy font-bold text-xl">
+      <a href="mailto:info@thetravelingdogsitter.com" class="hover:text-gold transition">info@thetravelingdogsitter.com</a>
+    </p>
+    <p class="text-navy text-lg">{{ .Params.phone_intro }}</p>
+    <p class="text-navy font-bold text-xl">
+      <a href="tel:+12065551234" class="hover:text-gold transition">(206) 555‑1234</a>
+    </p>
+  </div>
+</section>
 {{ end }}

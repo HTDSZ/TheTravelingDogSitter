@@ -1,116 +1,58 @@
 {{ define "main" }}
-<div class="page-header" style="background-image: url('{{ .Params.header.image }}');">
-    <div class="page-header-content">
-        <h1>{{ .Params.header.title }}</h1>
-        <p>{{ .Params.header.subtitle }}</p>
-    </div>
-</div>
+<!-- Page Header -->
+<section class="relative h-[60vh] w-full mb-16">
+  <img src="{{ .Params.header.image }}" alt="Hero Image" class="absolute inset-0 h-full w-full object-cover grayscale">
+  <div class="absolute inset-0 bg-navy opacity-70"></div>
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+    <h1 class="font-h1 text-5xl md:text-6xl text-cream drop-shadow mb-4">{{ .Params.header.title }}</h1>
+    <p class="font-h2 text-xl md:text-2xl text-cream drop-shadow">{{ .Params.header.subtitle }}</p>
+  </div>
+</section>
 
-<div class="page-content">
-    <!-- Story Section -->
-    <div class="content-section story-section">
-        <div class="section-container story-container">
-            <div class="story-image">
-                <img src="{{ .Params.story.image }}" alt="A professional photo of Zoli Hajdu">
-            </div>
-            <div class="story-text">
-                <h2 class="section-title">{{ .Params.story.title }}</h2>
-                {{ .Params.story.text | markdownify }}
-            </div>
+
+<!-- Story Section -->
+<section class="py-20 px-6 bg-cream">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src="{{ .Params.story.image }}" alt="Zoli portrait" class="rounded-lg w-full">
+    </div>
+    <div>
+      <h2 class="font-h1 text-4xl text-navy mb-4">{{ .Params.story.title }}</h2>
+      <p class="text-navy whitespace-pre-line">{{ .Params.story.text }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Qualifications Section -->
+<section class="py-20 px-6 bg-[#e0dbd1]">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-h1 text-3xl text-navy mb-12 text-center">{{ .Params.qualifications.title }}</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      {{ range .Params.qualifications.items }}
+      <div class="bg-white p-6 rounded-lg shadow">
+        <div class="text-slate mb-4">
+          {{ if eq .icon "heart" }}<svg xmlns="http://www.w3.org/2000/svg" class="mx-auto" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>{{ end }}
+          {{ if eq .icon "shield" }}<svg xmlns="http://www.w3.org/2000/svg" class="mx-auto" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>{{ end }}
+          {{ if eq .icon "alert-triangle" }}<svg xmlns="http://www.w3.org/2000/svg" class="mx-auto" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>{{ end }}
+          {{ if eq .icon "lock" }}<svg xmlns="http://www.w3.org/2000/svg" class="mx-auto" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>{{ end }}
         </div>
+        <h3 class="font-h2 text-xl text-navy mb-2">{{ .title }}</h3>
+        <p class="text-navy mb-4">{{ .text }}</p>
+        {{ if .cta_text }}
+        <a href="{{ .cta_link }}" class="inline-block text-slate font-bold border-2 border-slate px-4 py-2 rounded hover:bg-slate hover:text-cream transition">{{ .cta_text }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
     </div>
+  </div>
+</section>
 
-    <!-- Qualifications Section -->
-    <div class="content-section qualifications-section">
-        <div class="section-container">
-            <h2 class="section-title">{{ .Params.qualifications.title }}</h2>
-            <div class="qualifications-grid">
-                {{ range .Params.qualifications.items }}
-                <div class="qualification-item">
-                    <div class="qualification-icon">
-                        {{ if eq .icon "shield" }}<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>{{ end }}
-                        {{ if eq .icon "alert-triangle" }}<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>{{ end }}
-                        {{ if eq .icon "heart" }}<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>{{ end }}
-                        {{ if eq .icon "lock" }}<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>{{ end }}
-                    </div>
-                    <div class="qualification-text">
-                        <h3>{{ .title }}</h3>
-                        <p>{{ .text }}</p>
-                        {{/* Check for and render the new CTA button */}}
-                        {{ if .cta_text }}
-                            <a href="{{ .cta_link }}" class="cta-button-inline-small">{{ .cta_text }}</a>
-                        {{ end }}
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA Section -->
-    <div class="content-section cta-section">
-        <div class="section-container">
-            <h2 class="section-title">{{ .Params.cta.title }}</h2>
-            <p>{{ .Params.cta.text }}</p>
-            <a href="{{ .Params.cta.button_link }}" class="cta-button">{{ .Params.cta.button_text }}</a>
-        </div>
-    </div>
-</div>
-{{ end }}
-
-{{ define "styles" }}
-<style>
-    .page-header { padding: 80px 40px; background-size: cover; background-position: center; text-align: center; color: var(--c-cream); position: relative; }
-    .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(1, 35, 64, 0.6); }
-    .page-header-content { position: relative; max-width: 800px; margin: 0 auto; }
-    .page-header-content h1 { font-family: var(--font-h1); font-size: 48px; margin-top: 0; }
-    .page-header-content p { font-family: var(--font-h2-h3); font-size: 20px; }
-    .page-content { padding-top: 40px; }
-    .content-section { padding: 40px; }
-    .section-container { max-width: 1100px; margin: 0 auto; }
-    .section-title { font-family: var(--font-h1); font-size: 36px; text-align: center; margin-bottom: 40px; }
-
-    /* Story Section */
-    .story-section { background-color: #fff; }
-    .story-container { display: flex; align-items: center; gap: 60px; }
-    .story-image { flex-basis: 35%; flex-shrink: 0; }
-    .story-image img { width: 100%; border-radius: 10px; }
-    .story-text { flex-basis: 65%; }
-    .story-text .section-title { text-align: left; }
-    .story-text p { font-size: 18px; line-height: 1.8; }
-
-    /* Qualifications Section */
-    .qualifications-section .section-container { max-width: 900px; }
-    .qualifications-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-    .qualification-item { display: flex; align-items: flex-start; gap: 20px; }
-    .qualification-icon { color: var(--c-gold); flex-shrink: 0; }
-    .qualification-text h3 { font-family: var(--font-h2-h3); font-size: 20px; margin: 0 0 5px 0; }
-    .qualification-text p { margin: 0; font-size: 16px; }
-
-    /* CTA Section */
-    .cta-section { background-color: var(--c-navy); color: var(--c-cream); text-align: center; }
-    .cta-section .section-title { color: var(--c-cream); }
-    .cta-section p { max-width: 650px; margin-left: auto; margin-right: auto; margin-bottom: 30px; }
-    .cta-button { display: inline-block; font-family: var(--font-h2-h3); font-weight: 700; font-size: 18px; text-decoration: none; color: var(--c-navy); background-color: var(--c-cream); padding: 15px 30px; border-radius: 5px; border: 2px solid var(--c-gold); transition: all 0.3s ease; }
-    .cta-button:hover { background-color: var(--c-gold); color: var(--c-navy); }
-
-    /* --- Inline CTA Button Styling (New) --- */
-    .cta-button-inline-small {
-        display: inline-block;
-        font-family: var(--font-h2-h3);
-        font-weight: 600;
-        font-size: 14px;
-        text-decoration: none;
-        color: var(--c-slate-blue);
-        padding: 8px 15px;
-        border-radius: 5px;
-        border: 1px solid var(--c-slate-blue);
-        transition: all 0.3s ease;
-        margin-top: 15px;
-    }
-    .cta-button-inline-small:hover {
-        background-color: var(--c-slate-blue);
-        color: var(--c-cream);
-    }
-</style>
+<!-- CTA Section -->
+<section class="py-20 px-6 bg-cream text-center">
+  <div class="max-w-xl mx-auto">
+    <h2 class="font-h1 text-3xl text-navy mb-4">{{ .Params.cta.title }}</h2>
+    <p class="text-navy mb-6">{{ .Params.cta.text }}</p>
+    <a href="{{ .Params.cta.button_link }}" class="inline-block bg-navy text-cream font-h2 font-bold text-lg px-6 py-3 rounded border-2 border-gold hover:bg-gold hover:text-navy transition">{{ .Params.cta.button_text }}</a>
+  </div>
+</section>
 {{ end }}

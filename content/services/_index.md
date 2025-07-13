@@ -2,14 +2,14 @@
 title: "My Services"
 date: 2025-07-01T13:41:00-07:00
 draft: false
+layout: section
+type: services
 
-# --- Page Header ---
 header:
   title: "A Singular Focus on Your Pet's Well-Being"
   subtitle: "My service is designed to provide a seamless, stress-free experience for both you and your pet, ensuring complete peace of mind while you are away."
   image: "/images/services-header.jpg"
 
-# --- Tangible Benefits Section ---
 benefits:
   title: "The In-Home Advantage"
   items:
@@ -20,7 +20,6 @@ benefits:
     - "Your home is looked after, providing security and peace of mind."
     - "You receive daily artistic photo updates of your happy pet."
 
-# --- Holistic Wellness Section ---
 wellness:
   title: "Holistic Wellness & Reiki"
   text: "As part of my commitment to your pet's total well-being, I offer complimentary Reiki sessions. This gentle, non-invasive energy practice is wonderful for reducing stress, easing anxiety, and promoting deep relaxation, especially for sensitive or elderly pets. It is a quiet, calming experience that enhances their comfort and sense of security during our time together."
@@ -28,8 +27,6 @@ wellness:
   cta_text: "Learn More About This Practice"
   cta_link: "/reiki-for-dogs"
 
-
-# --- What to Expect Section ---
 process:
   title: "What to Expect: A Seamless Process"
   steps:
@@ -42,7 +39,6 @@ process:
     - title: "4. A Peaceful Return"
       text: "You will return to a happy, healthy pet and a tidy home. My goal is to make it feel as though you never left, allowing you to relax and reconnect with your best friend."
 
-# --- FAQ Section ---
 faq:
   title: "Frequently Asked Questions"
   items:
@@ -55,7 +51,6 @@ faq:
     - question: "Do you care for pets other than dogs?"
       answer: "While my primary focus is on dogs, I have experience caring for a variety of animals, including cats. Please contact me to discuss your specific needs."
 
-# --- CTA Section (New) ---
 cta:
   title: "Ready for True Peace of Mind?"
   text: "Your pet deserves the best, and you deserve a worry-free trip. Let's talk about how I can provide the perfect in-home care for your next journey."

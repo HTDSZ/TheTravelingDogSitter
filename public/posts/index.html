@@ -1,300 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    
-    <link rel="stylesheet" href="/css/main.min.bbf1fb1b9e8b54cb411291cf19b3865b4f58d09072f22a162387d38c8b06d069.css" integrity="sha256-u/H7G56LVMtBEpHPGbOGW09Y0JBy8ioWI4fTjIsG0Gk=">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Posts | The Traveling Dog Sitter</title>
+  <meta name="description" content="The Traveling Dog Sitter offers premier, in-home dog sitting for discerning owners in the Puget Sound region. Absolute peace of mind for you, unmatched comfort for your pet.">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posts | The Traveling Dog Sitter</title>
-
-    <meta name="description" content="The Traveling Dog Sitter offers premier, in-home dog sitting for discerning owners in the Puget Sound region. Absolute peace of mind for you, unmatched comfort for your pet.">
-
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "The Traveling Dog Sitter",
-      "image": "https://placehold.co/600x600/557373/F4F1EA?text=The+Traveling+Dog+Sitter+Logo",
-      "@id": "http:\/\/localhost:1313\/",
-      "url": "http:\/\/localhost:1313\/",
-      "telephone": "(979) 969-7312",
-      "email": "office@thetravelingdogsitter.com",
-      "description": "Premier in-home dog and pet sitting service in the Greater Seattle area, providing absolute peace of mind through reliable, discreet, and holistic care.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Seattle",
-        "addressRegion": "WA",
-        "addressCountry": "US"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 47.6062, "longitude": -122.3321 },
-      "openingHoursSpecification": { "@type": "OpeningHoursSpecification", "dayOfWeek": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ], "opens": "00:00", "closes": "23:59" },
-      "sameAs": [
-        "https:\/\/www.facebook.com\/profile.php?id=61559301070941",
-        "https:\/\/www.linkedin.com\/in\/zoli-hajdu-6641b534b"
-      ]
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F4F1EA',
+            navy: '#012340',
+            slate: '#557373',
+            gold: '#C0B283'
+          },
+          fontFamily: {
+            h1: ['Playfair Display', 'serif'],
+            h2: ['Montserrat', 'sans-serif'],
+            body: ['Source Sans Pro', 'sans-serif']
+          }
+        }
+      }
     }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
-
-    <style>
-        :root { --c-cream: #F4F1EA; --c-navy: #012340; --c-slate-blue: #557373; --c-gold: #C0B283; --font-h1: 'Playfair Display', serif; --font-h2-h3: 'Montserrat', sans-serif; --font-body: 'Source Sans Pro', sans-serif; }
-        body { margin: 0; font-family: var(--font-body); background-color: var(--c-cream); color: var(--c-navy); font-size: 18px; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
-        main { flex-grow: 1; }
-        .site-header { background-color: var(--c-cream); padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e0dbd1; }
-        .site-title { font-family: var(--font-h1); font-weight: 400; font-size: 28px; color: var(--c-navy); text-decoration: none; }
-        .main-nav ul { margin: 0; padding: 0; list-style: none; display: flex; gap: 30px; }
-        .main-nav a { font-family: var(--font-h2-h3); text-decoration: none; color: var(--c-slate-blue); font-weight: 600; font-size: 16px; padding-bottom: 5px; border-bottom: 2px solid transparent; transition: all 0.3s ease; }
-        .main-nav a:hover, .main-nav a.active { color: var(--c-navy); border-bottom-color: var(--c-gold); }
-
-         
-        .site-footer { background-color: var(--c-navy); color: var(--c-cream); text-align: center; padding: 40px 20px; font-size: 14px; }
-        .footer-contact { margin-bottom: 20px; }
-        .footer-contact a { color: var(--c-cream); text-decoration: none; margin: 0 15px; }
-        .footer-contact a:hover { text-decoration: underline; }
-        .footer-copyright { font-size: 12px; opacity: 0.7; }
-    </style>
-
-    
-<style>
-    .page-header { padding: 80px 40px; background-size: cover; background-position: center; text-align: center; color: var(--c-cream); position: relative; }
-    .page-header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(1, 35, 64, 0.6); }
-    .page-header-content { position: relative; max-width: 800px; margin: 0 auto; }
-    .page-header-content h1 { font-family: var(--font-h1); font-size: 48px; margin-top: 0; }
-    .page-header-content p { font-family: var(--font-h2-h3); font-size: 20px; }
-    .page-content { padding-top: 40px; }
-    .content-section { padding: 40px; }
-    .section-container { max-width: 1100px; margin: 0 auto; }
-    .section-title { font-family: var(--font-h1); font-size: 36px; text-align: center; margin-bottom: 40px; }
-    .benefits-list { list-style: none; padding: 0; columns: 2; gap: 30px; }
-    .benefits-list li { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px; break-inside: avoid-column; }
-    .benefits-list svg { color: var(--c-gold); flex-shrink: 0; margin-top: 4px; }
-    .wellness-section { background-color: #e0dbd1; }
-    .wellness-container { display: flex; align-items: center; gap: 60px; }
-    .wellness-text { flex-basis: 50%; }
-    .wellness-image { flex-basis: 50%; }
-    .wellness-image img { width: 100%; border-radius: 10px; }
-    .wellness-section .section-title { text-align: left; }
-    .process-steps { display: flex; gap: 40px; }
-    .process-step { border-left: 3px solid var(--c-gold); padding-left: 25px; }
-    .process-step h3 { font-family: var(--font-h2-h3); font-size: 22px; }
-    .faq-section .section-container { max-width: 800px; }
-    .faq-item { border-bottom: 1px solid #e0dbd1; }
-    .faq-question { width: 100%; background: none; border: none; text-align: left; padding: 20px 0; font-family: var(--font-h2-h3); font-size: 18px; font-weight: 600; color: var(--c-navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-    .faq-icon { font-size: 24px; color: var(--c-slate-blue); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-    .faq-answer p { padding-bottom: 20px; margin: 0; }
-
-     
-    .cta-section { background-color: var(--c-navy); color: var(--c-cream); text-align: center; }
-    .cta-section .section-title { color: var(--c-cream); }
-    .cta-section p { max-width: 650px; margin-left: auto; margin-right: auto; margin-bottom: 20px; }
-    .cta-button { display: inline-block; font-family: var(--font-h2-h3); font-weight: 700; font-size: 18px; text-decoration: none; color: var(--c-navy); background-color: var(--c-cream); padding: 15px 30px; border-radius: 5px; border: 2px solid var(--c-gold); transition: all 0.3s ease; }
-    .cta-button:hover { background-color: var(--c-gold); color: var(--c-navy); }
-
-     
-    .cta-button-inline {
-        display: inline-block;
-        font-family: var(--font-h2-h3);
-        font-weight: 700;
-        text-decoration: none;
-        color: var(--c-slate-blue);
-        padding: 12px 25px;
-        border-radius: 5px;
-        border: 2px solid var(--c-slate-blue);
-        transition: all 0.3s ease;
-        margin-top: 20px;
-    }
-    .cta-button-inline:hover {
-        background-color: var(--c-slate-blue);
-        color: var(--c-cream);
-    }
-</style>
-
-
-    
-    
-    
-
-
-    
-    <link rel="stylesheet" href="/css/custom.css">
-
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+  
 </head>
-<body>
 
-    <header class="site-header">
-        <a href="/" class="site-title">The Traveling Dog Sitter</a>
-        <nav class="main-nav">
-            <ul>
-                
-                <li>
-                    <a href="/about" >
-                        About
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="/services" >
-                        Services
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="/testimonials" >
-                        Testimonials
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="/black-russian-terrier" >
-                        The BRT
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="/blog" >
-                        The Blog
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="/galleries" >
-                        Client Galleries
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="/store" >
-                        Gift Store
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="/contact" >
-                        Contact
-                    </a>
-                </li>
-                
-            </ul>
-        </nav>
-    </header>
+<body class="font-body bg-cream text-navy flex flex-col min-h-screen">
 
-    <main>
+  
+  <header class="bg-cream border-b border-[#e0dbd1] p-5 md:p-8 flex justify-between items-center">
+    <a href="/" class="font-h1 text-2xl font-normal text-navy">The Traveling Dog Sitter</a>
+    <nav>
+      <ul class="flex gap-6 text-slate font-semibold text-base">
         
-<div class="page-header" style="background-image: url('');">
-    <div class="page-header-content">
-        <h1></h1>
-        <p></p>
-    </div>
-</div>
+        <li>
+          <a href="/about" class="hover:text-navy hover:border-b-2 border-gold transition duration-300 ">
+            About
+          </a>
+        </li>
+        
+        <li>
+          <a href="/services" class="hover:text-navy hover:border-b-2 border-gold transition duration-300 ">
+            Services
+          </a>
+        </li>
+        
+        <li>
+          <a href="/testimonials" class="hover:text-navy hover:border-b-2 border-gold transition duration-300 ">
+            Testimonials
+          </a>
+        </li>
+        
+        <li>
+          <a href="/black-russian-terrier" class="hover:text-navy hover:border-b-2 border-gold transition duration-300 ">
+            The BRT
+          </a>
+        </li>
+        
+        <li>
+          <a href="/blog" class="hover:text-navy hover:border-b-2 border-gold transition duration-300 ">
+            The Blog
+          </a>
+        </li>
+        
+        <li>
+          <a href="/galleries" class="hover:text-navy hover:border-b-2 border-gold transition duration-300 ">
+            Client Galleries
+          </a>
+        </li>
+        
+        <li>
+          <a href="/store" class="hover:text-navy hover:border-b-2 border-gold transition duration-300 ">
+            Gift Store
+          </a>
+        </li>
+        
+        <li>
+          <a href="/contact" class="hover:text-navy hover:border-b-2 border-gold transition duration-300 ">
+            Contact
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </header>
 
-<div class="page-content">
-    <div class="section-container">
-        <p>Tempor est exercitation ad qui pariatur quis adipisicing aliquip nisi ea consequat ipsum occaecat. Nostrud consequat ullamco laboris fugiat esse esse adipisicing velit laborum ipsum incididunt ut enim. Dolor pariatur nulla quis fugiat dolore excepteur. Aliquip ad quis aliqua enim do consequat.</p>
-
-    </div>
-
+  
+  <main class="flex-grow">
     
-    <div class="content-section benefits-section">
-        <div class="section-container">
-            <h2 class="section-title"></h2>
-            <ul class="benefits-list">
-                
-            </ul>
-        </div>
+
+<section class="relative h-screen w-full mb-12">
+  <img src="" alt="Hero Image" class="absolute inset-0 h-full w-full object-cover grayscale">
+  <div class="absolute inset-0 bg-navy opacity-70"></div>
+  <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+    <h1 class="font-h1 text-5xl md:text-6xl text-cream drop-shadow mb-4"></h1>
+    <p class="font-h2 text-xl md:text-2xl text-cream drop-shadow"></p>
+  </div>
+</section>
+
+
+<section class="py-20 px-6 bg-cream">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-h1 text-3xl text-navy mb-8 text-center"></h2>
+    <ul class="space-y-4 list-disc list-inside text-navy text-lg">
+      
+    </ul>
+  </div>
+</section>
+
+
+<section class="py-20 px-6 bg-[#e0dbd1]">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <img src="" alt="Reiki" class="rounded-lg w-full">
     </div>
-
-    
-    <div class="content-section wellness-section">
-        <div class="section-container wellness-container">
-            <div class="wellness-text">
-                <h2 class="section-title"></h2>
-                <p></p>
-                
-                
-            </div>
-            <div class="wellness-image">
-                <img src="" alt="A calming scene representing holistic pet wellness">
-            </div>
-        </div>
+    <div>
+      <h2 class="font-h1 text-4xl text-navy mb-4"></h2>
+      <p class="text-navy mb-6"></p>
+      <a href="" class="inline-block text-slate font-bold border-2 border-slate px-6 py-2 rounded hover:bg-slate hover:text-cream transition"></a>
     </div>
+  </div>
+</section>
 
-    
-    <div class="content-section process-section">
-        <div class="section-container">
-            <h2 class="section-title"></h2>
-            <div class="process-steps">
-                
-            </div>
-        </div>
+
+<section class="py-20 px-6 bg-cream">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-h1 text-3xl text-navy mb-8 text-center"></h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      
     </div>
+  </div>
+</section>
 
-    
-    <div class="content-section faq-section">
-        <div class="section-container">
-            <h2 class="section-title"></h2>
-            <div class="faq-accordion">
-                
-            </div>
-        </div>
+
+<section class="py-20 px-6 bg-[#e0dbd1]">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-h1 text-3xl text-navy mb-8 text-center"></h2>
+    <div class="space-y-6">
+      
     </div>
+  </div>
+</section>
 
-    
-    <div class="content-section cta-section">
-        <div class="section-container">
-            <h2 class="section-title"></h2>
-            <p></p>
-            <a href="" class="cta-button"></a>
-        </div>
+
+<section class="py-20 px-6 bg-cream text-center">
+  <div class="max-w-xl mx-auto">
+    <h2 class="font-h1 text-3xl text-navy mb-4"></h2>
+    <p class="text-navy mb-6"></p>
+    <a href="" class="inline-block bg-navy text-cream font-h2 font-bold text-lg px-6 py-3 rounded border-2 border-gold hover:bg-gold hover:text-navy transition"></a>
+  </div>
+</section>
+
+  </main>
+
+  
+  <footer class="bg-navy text-cream text-center text-sm py-10 px-6">
+    <div class="mb-3">
+      <a href="tel:%28979%29%20969-7312" class="mx-3 hover:underline">(979) 969-7312</a>
+      <a href="mailto:office@thetravelingdogsitter.com" class="mx-3 hover:underline">office@thetravelingdogsitter.com</a>
     </div>
-</div>
+    <div class="opacity-70 text-xs">&copy; 2025 The Traveling Dog Sitter. All Rights Reserved.</div>
+  </footer>
 
-    </main>
-
-    
-    <footer class="site-footer">
-        <div class="footer-contact">
-            <a href="tel:%28979%29%20969-7312">(979) 969-7312</a> |
-            <a href="mailto:office@thetravelingdogsitter.com">office@thetravelingdogsitter.com</a>
-        </div>
-        <div class="footer-copyright">
-            &copy; 2025 The Traveling Dog Sitter. All Rights Reserved.
-        </div>
-    </footer>
-
-    
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const faqItems = document.querySelectorAll('.faq-item');
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            const answer = item.querySelector('.faq-answer');
-            const icon = item.querySelector('.faq-icon');
-            question.addEventListener('click', () => {
-                const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.querySelector('.faq-answer').style.maxHeight = '0px';
-                        otherItem.querySelector('.faq-icon').textContent = '+';
-                    }
-                });
-                if (isOpen) {
-                    answer.style.maxHeight = '0px';
-                    icon.textContent = '+';
-                } else {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    icon.textContent = '-';
-                }
-            });
-        });
-    });
-</script>
-
-
+  
 </body>
 </html>

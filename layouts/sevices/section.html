@@ -1,6 +1,6 @@
 {{ define "main" }}
-<!-- Hero Section -->
-<section class="relative h-screen w-full mb-12">
+<!-- Page Header -->
+<section class="relative h-[60vh] w-full mb-16">
   <img src="{{ .Params.header.image }}" alt="Hero Image" class="absolute inset-0 h-full w-full object-cover grayscale">
   <div class="absolute inset-0 bg-navy opacity-70"></div>
   <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
@@ -8,6 +8,7 @@
     <p class="font-h2 text-xl md:text-2xl text-cream drop-shadow">{{ .Params.header.subtitle }}</p>
   </div>
 </section>
+
 
 <!-- Benefits Section -->
 <section class="py-20 px-6 bg-cream">

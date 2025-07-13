@@ -2,12 +2,9 @@
 title: "A Comprehensive Guide to the Black Russian Terrier"
 date: 2025-07-01
 draft: false
-type: black-russian-terrier
-layout: single
 image: "/images/brt-detailed-guide.jpg"
 summary: "A deep dive into the history, temperament, health, and care requirements of the Black Russian Terrier."
 ---
-
 
 ### 1. History and Origin
 

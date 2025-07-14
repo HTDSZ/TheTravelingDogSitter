@@ -21,6 +21,12 @@ differentiators:
     text: "Providing professional, discreet service for discerning clients is my highest priority. Your privacy and security are paramount."
     icon: "lock"
 
+# --- Visitor e-mail Section Content ---
+smart_inquiry:
+  intro_line: "Long-term, in-home dog sitting — minimum 5 nights or more"
+  headline: "Starting at $195/night"
+  description: "Enter your email and I’ll send you more info, including a short questionnaire."
+
 # --- Testimonials Section Content ---
 testimonials:
   - quote: "The peace of mind we had on our trip was priceless. We came home to a happy, relaxed dog and an immaculate house. Zoli is the only person we trust."

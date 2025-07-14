@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/beyond-the-years/</loc>
-    <lastmod>2025-07-12T14:03:00-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-07-12T14:03:00-07:00</lastmod>
+    <lastmod>2025-07-13T06:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-07-12T14:03:00-07:00</lastmod>
+    <lastmod>2025-07-13T06:03:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/luxury-pet-sitting/</loc>
+    <lastmod>2025-07-13T06:03:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/more-than-a-warm-body/</loc>
+    <lastmod>2025-07-13T06:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/practical-advice/</loc>
+    <lastmod>2025-07-13T06:03:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/beyond-the-years/</loc>
     <lastmod>2025-07-12T14:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/senior-dog-care--well-being/</loc>
@@ -27,9 +33,6 @@
     <lastmod>2025-07-08T14:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/dog-health--wellness/</loc>
-    <lastmod>2025-07-07T14:03:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/luxury-pet-sitting/</loc>
     <lastmod>2025-07-07T14:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/the-price-of-free/</loc>

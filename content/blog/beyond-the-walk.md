@@ -9,6 +9,7 @@ categories: ["Practical Advice", "Senior Dog Care & Well-being"]
 ---
 
 
+
 We've all heard it before: "A tired dog is a good dog." It's an idea that has shaped how people think about canine wellness for decades. And while there is truth to the importance of physical exercise, it's also a phrase that oversimplifies what dogs actually need. We’ve been taught to chase the physical output—to tire out the body—but we’ve largely ignored the mind. And for many dogs, that’s where the problems start.
 
 At The Traveling Dog Sitter, I live with the dogs I care for. I’m not just there for 20-minute walks or food bowl refills. I’m embedded in their daily lives, witnessing the rhythm of their days and their subtle behavioral shifts. And again and again, I see it: the dog who’s had a solid walk, a full belly, a comfy bed—but still can’t settle. Still paces. Still whines. Still seems off. That’s not physical restlessness. That’s mental hunger.

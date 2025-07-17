@@ -3,18 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-07-14T14:03:00-07:00</lastmod>
+    <lastmod>2025-07-16T14:03:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/dog-behavior--communication/</loc>
+    <lastmod>2025-07-16T14:03:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/dog-logic/</loc>
+    <lastmod>2025-07-16T14:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-07-14T14:03:00-07:00</lastmod>
+    <lastmod>2025-07-16T14:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/practical-advice/</loc>
-    <lastmod>2025-07-14T14:03:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/grieving-dog-and-life-transitions/</loc>
-    <lastmod>2025-07-14T14:03:00-07:00</lastmod>
+    <lastmod>2025-07-16T14:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/morning-dog-mood/</loc>
+    <lastmod>2025-07-15T14:03:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/grieving-dog-and-life-transitions/</loc>
     <lastmod>2025-07-14T14:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/luxury-pet-sitting/</loc>
@@ -36,9 +42,6 @@
     <lastmod>2025-07-09T10:03:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/do-dogs-remember/</loc>
-    <lastmod>2025-07-08T14:03:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/dog-behavior--communication/</loc>
     <lastmod>2025-07-08T14:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/dog-health--wellness/</loc>

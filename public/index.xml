@@ -6,8 +6,15 @@
     <description>Recent content in Home on The Traveling Dog Sitter</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Jul 2025 14:03:00 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 16 Jul 2025 14:03:00 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dog Logic</title>
+      <link>http://localhost:1313/blog/dog-logic/</link>
+      <pubDate>Wed, 16 Jul 2025 14:03:00 -0700</pubDate>
+      <guid>http://localhost:1313/blog/dog-logic/</guid>
+      <description>This blog explores the quirky yet deeply instinctive behaviors of dogs—from sock hoarding to random zoomies—and reveals how, when we stop judging their weirdness and start interpreting it through the lens of trust, scent, routine, and emotional nuance, we begin to understand the beautiful logic that shapes their world.</description>
+    </item>
     <item>
       <title>The Morning Report</title>
       <link>http://localhost:1313/blog/morning-dog-mood/</link>

@@ -3,15 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2025-07-18T14:03:00-07:00</lastmod>
+    <lastmod>2025-07-20T06:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-07-18T14:03:00-07:00</lastmod>
+    <lastmod>2025-07-20T06:03:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/luxury-pet-sitting/</loc>
+    <lastmod>2025-07-20T06:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/practical-advice/</loc>
-    <lastmod>2025-07-18T14:03:00-07:00</lastmod>
+    <lastmod>2025-07-20T06:03:00-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/tail-tap-love-lenguage/</loc>
+    <loc>http://localhost:1313/blog/calm-leadership-dogs/</loc>
+    <lastmod>2025-07-20T06:03:00-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tail-tap-love-language/</loc>
     <lastmod>2025-07-18T14:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/dog-behavior--communication/</loc>
@@ -25,9 +31,6 @@
   </url><url>
     <loc>http://localhost:1313/blog/grieving-dog-and-life-transitions/</loc>
     <lastmod>2025-07-14T14:03:00-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/luxury-pet-sitting/</loc>
-    <lastmod>2025-07-13T06:03:00-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/more-than-a-warm-body/</loc>
     <lastmod>2025-07-13T06:03:00-07:00</lastmod>
